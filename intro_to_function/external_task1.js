@@ -1,4 +1,4 @@
-// Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. 
+// Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside.
 // The strings will not be the same length, but they may be empty ( zero length ).
 // Hint for R users:
 // The length of string is not always the same as the number of characters
@@ -6,20 +6,18 @@
 // ("1", "22") --> "1221"
 // ("22", "1") --> "1221"
 
-function StringSLS(a, b){
-    if (a.length < b.length){
-        return a + b + a; 
-    }
-    else if(a.length > b.length){
-        return b + a + b;
-    }    
-    else {
-        return 'Error: numbers must be of different lengths'; 
-    }
+function StringSLS(a, b) {
+  if (a.length < b.length) {
+    return a + b + a;
+  } else if (a.length > b.length) {
+    return b + a + b;
+  } else {
+    return "Error: numbers must be of different lengths";
+  }
 }
 
-console.log(`output:'${StringSLS('2', '11')}'`);
-console.log(`output:'${StringSLS('22', '1')}'`);
-console.log(`output:'${StringSLS('A', '1')}'`);
-console.log(`output:'${StringSLS(' ', '11')}'`);
-console.log(`output:'${StringSLS(' ', '1')}'`); //same length
+console.log(`output:'${StringSLS("2", "11")}'`);
+console.log(`output:'${StringSLS("22", "1")}'`);
+console.log(`output:'${StringSLS("A", "1")}'`);
+console.log(`output:'${StringSLS(" ", "11")}'`);
+console.log(`output:'${StringSLS(" ", "1")}'`); //same length

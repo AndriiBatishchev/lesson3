@@ -10,48 +10,45 @@
 // Огорніть кожен окремий виклик функції divide в try…catch.Використовуючи блок finally, ->
 //-> виведіть повідомлення "Робота завершена" в консоль, навіть якщо помилка виникла або не виникла.
 
-function divide(numerator,denominator ) {
+function divide(numerator, denominator) {
+  if (
+    denominator === 0 ||
+    typeof numerator !== "number" ||
+    typeof denominator !== "number"
+  ) {
+    throw new Error("Arguments must be numbers and denominator cannot be Zero");
+  }
 
-    if (denominator === 0 ||typeof numerator !== "number"||typeof denominator !== "number") {
-        throw new Error ('Arguments must be numbers and denominator cannot be Zero'); 
-      }
-
-   return numerator/denominator;
-    }
-/////////////////////////// Positive case
-    try{
-        const result = divide(10,2)
-        console.log(result);
-    }
-    catch(error) {
-        console.error("Помилка:", error.message);
-    } 
-    finally {
-        console.log('Робота завершена');
-    }
-///
-console.log('------------------');
-/////////////////////////// Zero
-    try{
-        const result = divide(10,0)
-        console.log(result);
-    }
-    catch(error) {
-        console.error("Помилка:", error.message);
-    } 
-    finally {
-        console.log('Робота завершена');
-    }
-///
-console.log('------------------');
-///////////////////////////some letters
-try{
-    const result = divide(10,'qwe')
-    console.log(result);
+  return numerator / denominator;
 }
-catch(error) {
-    console.error("Помилка:", error.message);
-} 
-finally {
-    console.log('Робота завершена');
+/////////////////////////// Positive case
+try {
+  const result = divide(10, 2);
+  console.log(result);
+} catch (error) {
+  console.error("Помилка:", error.message);
+} finally {
+  console.log("Робота завершена");
+}
+///
+console.log("------------------");
+/////////////////////////// Zero
+try {
+  const result = divide(10, 0);
+  console.log(result);
+} catch (error) {
+  console.error("Помилка:", error.message);
+} finally {
+  console.log("Робота завершена");
+}
+///
+console.log("------------------");
+///////////////////////////some letters
+try {
+  const result = divide(10, "qwe");
+  console.log(result);
+} catch (error) {
+  console.error("Помилка:", error.message);
+} finally {
+  console.log("Робота завершена");
 }

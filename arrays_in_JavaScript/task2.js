@@ -12,9 +12,5 @@ const arrays = [1, 2, 3, 4, 5];
 //     });
 // console.log(newArrays);
 
-
 const newArrays = arrays.map((value, index) => value * index);
 console.log(newArrays);
-
-
-

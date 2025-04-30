@@ -1,73 +1,72 @@
-// Створіть клас "Книга" (Book) з властивостями, такими як "назва", "автор" і "рік видання". 
-// Додайте метод до класу Book, який буде виводити повний опис книги наприклад printInfo. 
+// Створіть клас "Книга" (Book) з властивостями, такими як "назва", "автор" і "рік видання".
+// Додайте метод до класу Book, який буде виводити повний опис книги наприклад printInfo.
 // Створіть кілька об'єктів цього класу та викличте printInfo для кожного екземпляру.
 
-
 export class Book {
-    constructor(name, author,yearOfPublication){
-        this.name = name;
-        this.author = author;
-        this.yearOfPublication = yearOfPublication;
-            }
+  constructor(name, author, yearOfPublication) {
+    this.name = name;
+    this.author = author;
+    this.yearOfPublication = yearOfPublication;
+  }
 
-    printInfo(){
-        console.log(`Full description of the book: Book name: '${this.name}', Book author: ${this.author}, year of publication: ${this.yearOfPublication}`);    
-            }
+  printInfo() {
+    console.log(
+      `Full description of the book: Book name: '${this.name}', Book author: ${this.author}, year of publication: ${this.yearOfPublication}`,
+    );
+  }
 
-//Name: Get+set
-    get name(){
-        return this._name;
+  //Name: Get+set
+  get name() {
+    return this._name;
+  }
+
+  set name(valueName) {
+    if (typeof valueName !== "string") {
+      console.log("Error. Don't use numbers for Name Book");
+      return;
     }
-
-    set name(valueName){
-        if(typeof valueName !== 'string'){
-            console.log("Error. Don't use numbers for Name Book");
-        return;
-        } 
     this._name = valueName;
-    }
+  }
 
-//author: Get+set
-get author(){
+  //author: Get+set
+  get author() {
     return this._author;
-}
+  }
 
-set author(valueAuthor){
-    if(typeof valueAuthor !== 'string'){
-        console.log("Error. Don't use numbers for author");
-    return;
-    } 
-this._author = valueAuthor;
-}
+  set author(valueAuthor) {
+    if (typeof valueAuthor !== "string") {
+      console.log("Error. Don't use numbers for author");
+      return;
+    }
+    this._author = valueAuthor;
+  }
 
-//yearOfPublication: Get+set
-get yearOfPublication(){
+  //yearOfPublication: Get+set
+  get yearOfPublication() {
     return this._yearOfPublication;
-}
+  }
 
-set yearOfPublication(valueyearOfPublication){
-    if(typeof valueyearOfPublication !== 'number'){
-        console.log("Error. Don't use letters");
-    return;
-    } 
-this._yearOfPublication = valueyearOfPublication;
-}
-//////////////Add static method
-//Створіть статичний метод в класі Book, який буде приймати масив об'єктів(екземрлярів) книг та повертати найдавнішу книгу за роком видання.
-//Викличте його в коді передавши масив книг (серед них мають бути екземляри обох класів Book та EBook)
+  set yearOfPublication(valueyearOfPublication) {
+    if (typeof valueyearOfPublication !== "number") {
+      console.log("Error. Don't use letters");
+      return;
+    }
+    this._yearOfPublication = valueyearOfPublication;
+  }
+  //////////////Add static method
+  //Створіть статичний метод в класі Book, який буде приймати масив об'єктів(екземрлярів) книг та повертати найдавнішу книгу за роком видання.
+  //Викличте його в коді передавши масив книг (серед них мають бути екземляри обох класів Book та EBook)
 
-static findOldestBook(bookArr) {
+  static findOldestBook(bookArr) {
     let oldBook = bookArr[0];
     for (let book of bookArr) {
-        if (book.yearOfPublication < oldBook.yearOfPublication) {
-            oldBook = book;
-        }
+      if (book.yearOfPublication < oldBook.yearOfPublication) {
+        oldBook = book;
+      }
     }
     return oldBook;
+  }
 }
-}
-
-
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////
 // const book_1 = new Book('The Art of Business Warfare','David Brown', 2022);

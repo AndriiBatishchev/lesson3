@@ -8,15 +8,15 @@
 // Виведіть оновлений об'єкт person в консоль.
 
 const person = {
-    firstName:'Tesla',
-    lastName:'Firtash',
-    age: 2000,
+  firstName: "Tesla",
+  lastName: "Firtash",
+  age: 2000,
 };
 // console.log('--------Without email--------');
 // console.log(person);
 
 // console.log('--------With email--------');
-person.email= "test@test.pro";
+person.email = "test@test.pro";
 // console.log(person);
 
 // console.log('--------Without age--------');

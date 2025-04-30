@@ -9,7 +9,7 @@
     "runTests": "node advanced_function/task1.js",
     "prepare": "husky",
     "eslint:all": "npx eslint .",
-    "prettier:all": "npx prettier --write ."
+    "prettier:all": "npx prettier --check ."
   },
   "repository": {
     "type": "git",

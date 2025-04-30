@@ -8,7 +8,6 @@
 // Створіть новий масив, який містить всі елементи з обох вихідних масивів.
 // Виведіть отриманий об'єднаний масив на консоль.
 
-
 const firstArray = [11, 21, 31, 41, 51];
 const secondArray = [33, 44, 55, 66, 88];
 const concatArray = firstArray.concat(secondArray);

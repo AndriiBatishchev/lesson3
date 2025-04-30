@@ -17,13 +17,12 @@
 // console.log(`Чи є особа дорослою: ${AdultAge(15)}`);
 // console.log(`Чи є особа дорослою: ${AdultAge(25)}`);
 
-
 //OR Variant2
-function AdultAge (age){
-    if(age >= 18){
-        return 'true';
-    }
-        return 'false';
+function AdultAge(age) {
+  if (age >= 18) {
+    return "true";
+  }
+  return "false";
 }
 console.log(`Чи є особа дорослою: ${AdultAge(15)}`);
 console.log(`Чи є особа дорослою: ${AdultAge(25)}`);

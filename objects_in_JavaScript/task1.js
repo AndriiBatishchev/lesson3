@@ -7,14 +7,13 @@
 // courses: масив, представляє список курсів, які він вивчає (наприклад, ["Математика", "Історія", "Програмування"]).
 
 const student = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 30,
-    courses:
-        {
-            Математика:'',
-            Історія:'',
-            Програмування:''
-    }
-  };
-  console.log(student );
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  courses: {
+    Математика: "",
+    Історія: "",
+    Програмування: "",
+  },
+};
+console.log(student);
